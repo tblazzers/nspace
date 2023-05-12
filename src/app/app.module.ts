@@ -4,14 +4,39 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HeaderComponent } from './core/header/header.component';
+
+
+
+import {MatToolbarModule} from '@angular/material/toolbar';
+import { MatCardModule } from '@angular/material/card';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
+import { MatBadgeModule } from '@angular/material/badge';
+import { LoginComponent } from './pages/login/login.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { ProductivityFormComponent } from './pages/productivity-form/productivity-form.component';
+import { SpaceComponent } from './pages/space/space.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    LoginComponent,
+    DashboardComponent,
+    ProductivityFormComponent,
+    SpaceComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    MatToolbarModule,
+    MatCardModule,
+    MatGridListModule,
+    MatMenuModule,
+    MatBadgeModule,
+    MatIconModule,
     BrowserAnimationsModule
   ],
   providers: [],
