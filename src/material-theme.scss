@@ -1,0 +1,65 @@
+@use '@angular/material' as mat;
+
+$my-primary-palette: (
+    50: #e3f4ff,
+    100: #bbe2ff,
+    200: #8cd0ff,
+    300: #55bdff,
+    400: #17aeff,
+    500: #009fff,
+    600: #008fff,
+    700: #007cff,
+    800: #1069ef,
+    900: #1f47d0,
+    contrast: (
+        50: rgba(black, 0.87),
+        100: rgba(black, 0.87),
+        200: rgba(black, 0.87),
+        300: white,
+        400: white,
+        500: white,
+        600: white,
+        700: white,
+        800: white,
+        900: white
+    )
+);
+
+$my-accent-palette: (
+    50: #fdf2e0,
+    100: #fadfb3,
+    200: #f6ca81,
+    300: #f3b450,
+    400: #f1a52c,
+    500: #ef9610,
+    600: #eb8a0d,
+    700: #e57b09,
+    800: #df6c07,
+    900: #d55404,
+    contrast: (
+        50: rgba(black, 0.87),
+        100: rgba(black, 0.87),
+        200: rgba(black, 0.87),
+        300: white,
+        400: white,
+        500: white,
+        600: white,
+        700: white,
+        800: white,
+        900: white
+    )
+);
+
+$my-accent: mat.define-palette($my-accent-palette, 500);
+$my-primary: mat.define-palette($my-primary-palette, 800);
+
+$my-theme: mat.define-light-theme((
+ color: (
+   primary: $my-primary,
+   accent: $my-accent
+ ),
+ typography: mat.define-typography-config(),
+ density: 0,
+));
+
+@include mat.all-component-themes($my-theme);

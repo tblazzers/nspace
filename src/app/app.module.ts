@@ -12,12 +12,15 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
+
+import { MatButtonModule } from '@angular/material/button';
 import { MatBadgeModule } from '@angular/material/badge';
 import { LoginComponent } from './pages/login/login.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { ProductivityFormComponent } from './pages/productivity-form/productivity-form.component';
 import { SpaceComponent } from './pages/space/space.component';
+import { RegisterComponent } from './pages/register/register.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +30,7 @@ import { SpaceComponent } from './pages/space/space.component';
     DashboardComponent,
     ProductivityFormComponent,
     SpaceComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,6 +39,7 @@ import { SpaceComponent } from './pages/space/space.component';
     MatCardModule,
     MatGridListModule,
     MatMenuModule,
+    MatButtonModule,
     MatBadgeModule,
     MatIconModule,
     BrowserAnimationsModule

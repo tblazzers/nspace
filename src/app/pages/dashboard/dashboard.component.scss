@@ -1,0 +1,70 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+@import '../../../material-theme.scss';
+
+$color-config: mat.get-color-config($my-theme);
+$accent-palette: map.get($color-config, 'accent');
+$primary-palette: map.get($color-config, 'primary');
+
+
+.dashboard-container {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.grid-container {
+    margin: 20px;
+}
+
+.dashboard-card {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    background-color:  mat.get-color-from-palette($accent-palette, 100);
+}
+
+.dashboard-card-content {
+    text-align: center;
+    height: 200px;
+    color: black;
+}
+
+.large-display-text {
+    font-size: 12vw; 
+    color: black;
+    line-height: 0.2;
+}
+
+.direction-btn {
+    background-color: mat.get-color-from-palette($primary-palette, 700);
+    height: 30px !important;
+    width: 30px !important;
+    padding: 2px !important;
+    margin-top: 10px;
+  }
+
+.row-text-container {
+    display: flex;
+    width: 85%;
+    margin: 0 auto;
+    justify-content: space-between;
+    padding: 5px 30px;
+    margin-top: 20px;
+    background-color: mat.get-color-from-palette($primary-palette, 50);
+    border-radius: 5px;
+}
+
+.start-btn {
+    color: white !important;
+    border: none; 
+    padding: 10px;
+    width: 140px;
+    box-shadow: none !important;
+    background-color: mat.get-color-from-palette($primary-palette, 700) !important;
+}
+
+.white-icon {
+    color: white;
+}

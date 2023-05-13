@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./space.component.scss']
 })
 export class SpaceComponent {
+  constructor() {
 
+  }
+
+  
 }

@@ -1,18 +1,30 @@
 
 <mat-toolbar color="primary">
   <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-    <img src="../../assets/images/logo.png" alt="Logo" style="margin-bottom: 14px;" />
+    <img src="assets/images/logo.png" alt="Logo" style="margin-bottom: 14px;"  />
   </button>
-  <span>My App</span>
+  <span>NSpace</span>
   <span class="example-spacer"></span>
-  <mat-card-header>
-    <mat-card-title style="padding-top: 10px;">Shiba Inu</mat-card-title>
-    <div mat-card-avatar class="example-header-image"></div>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" matBadge="8"
-      matBadgePosition="below" matBadgeColor="accent">
-      <mat-icon>notifications</mat-icon>
-    </button>
-  </mat-card-header>
+  <div style="padding-right: 50px;">
+
+     <!-- <mat-card style="background-color: transparent; box-shadow: none;">
+    <mat-card-header>
+      <mat-card-title style="padding-top: 10px;">Shiba Inu</mat-card-title>
+      <div mat-card-avatar class="example-header-image"></div>
+      <button mat-icon-button class="example-icon" aria-label="Notification icon" matBadge="8"
+        matBadgePosition="below after" matBadgeColor="accent">
+        <mat-icon>notifications</mat-icon>
+      </button>
+    </mat-card-header>
+  </mat-card> -->
+  <p>
+    <button mat-button routerLink="login" [disableRipple]="true">Login</button>
+    <button mat-button routerLink="register" [disableRipple]="true">Register</button>
+    <button mat-button [disableRipple]="true">Contact</button>
+  </p>
+  </div>
+ 
+ 
 
 
   <!-- <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
