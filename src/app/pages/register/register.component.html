@@ -1,11 +1,11 @@
-<div class="login-container">
+<div class="register-container">
   <div style="width: 40%; margin-top: 150px;">
       <div style="width: 80%; margin: 0 auto;">
-          <form>
-              <input type="text" placeholder="Enter your Full Name" />
-              <input type="text" placeholder="Enter your Occupation" />
-              <input type="email" placeholder="Enter your Email" />
-              <input type="password" placeholder="Enter your Password"/>
+          <form [formGroup]="registrationFormGroup" (ngSubmit)="registerUser()">
+              <input type="text" placeholder="Enter your Full Name" formControlName="fullName" />
+              <input type="text" placeholder="Enter your Occupation" formControlName="occupation" />
+              <input type="email" placeholder="Enter your Email" formControlName="email" />
+              <input type="password" placeholder="Enter your Password" formControlName="password" />
               <input type="submit" value="Register" />
           </form>
           <p>

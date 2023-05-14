@@ -1,9 +1,9 @@
 <div class="login-container">
   <div style="width: 40%; margin-top: 200px;">
       <div style="width: 80%; margin: 0 auto;">
-          <form>
-              <input type="email" placeholder="Enter your Email" />
-              <input type="password" placeholder="Enter your Password"/>
+          <form  [formGroup]="loginFormGroup" (ngSubmit)="loginUser()">
+              <input type="email" placeholder="Enter your Email" formControlName="email" />
+              <input type="password" placeholder="Enter your Password" formControlName="password"/>
               <input type="submit" value="Login" />
           </form>
           <p>

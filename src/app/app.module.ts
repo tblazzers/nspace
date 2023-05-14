@@ -21,6 +21,13 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { ProductivityFormComponent } from './pages/productivity-form/productivity-form.component';
 import { SpaceComponent } from './pages/space/space.component';
 import { RegisterComponent } from './pages/register/register.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { environment } from 'src/environments/environment';
+
+import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
+import { provideAuth, getAuth } from '@angular/fire/auth';
+import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [
@@ -42,7 +49,13 @@ import { RegisterComponent } from './pages/register/register.component';
     MatButtonModule,
     MatBadgeModule,
     MatIconModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule,
+    CommonModule,
+    ReactiveFormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
+    provideAuth(() => getAuth()),
+    provideFirestore(() => getFirestore()),
   ],
   providers: [],
   bootstrap: [AppComponent]

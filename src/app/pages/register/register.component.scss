@@ -5,7 +5,7 @@
 $color-config: mat.get-color-config($my-theme);
 $primary-palette: map.get($color-config, 'primary');
 
-.login-container {
+.register-container {
     display: flex;
     justify-content: space-between;
 }
@@ -33,6 +33,7 @@ input[type=submit] {
     font-size: 17px;
     margin-bottom: 30px;
     background-color: mat.get-color-from-palette($primary-palette, 800);
+    cursor: pointer;
 }
 
 .side-banner-container{
