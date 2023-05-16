@@ -1,11 +1,17 @@
 <div class="space-container">
   <div class="timer-p">
-    5:00
+    <span #hours>00</span>:
+    <span #minutes>00</span>:
+    <span #seconds>00</span>
   </div>
-  <div class="space-videos-container">
+  <button id="join">Join</button>
+  <button id="leave">Leave</button>
+  <div #videos_container class="space-videos-container">
     <div class="video-block">
       <!-- <video id="localVideo" class="vid" autoplay muted height="250" width="100%"></video> -->
-      <img src="https://pbs.twimg.com/profile_images/1514983202179674113/KPHBm2WC_400x400.jpg" height="250" width="100%" alt="video" />
+      <div #myDiv style="height: 300px;">
+
+      </div>
       <div class="space-video-titles">
         <p style="font-size: large;">
           Unegbu Kingsley
@@ -23,12 +29,14 @@
         </button>
       </div>
     </div>
-    
-    <div class="video-block">
-      <img src="https://pbs.twimg.com/profile_images/1514983202179674113/KPHBm2WC_400x400.jpg" height="300" width="100%" alt="video" />
+
+    <!-- <div class="video-block">
+      <div #{{user}}></div>
+      <img src="https://pbs.twimg.com/profile_images/1514983202179674113/KPHBm2WC_400x400.jpg" height="300" width="100%"
+        alt="video" />
       <div class="space-video-titles">
         <p style="font-size: large;">
-          Unegbu Kingsley
+          {{user}}
         </p>
         <p>
           Software Developer
@@ -42,11 +50,12 @@
           <mat-icon>videocam</mat-icon>
         </button>
       </div>
-    </div>
-    
+    </div> 
+
 
     <div class="video-block">
-      <img src="https://pbs.twimg.com/profile_images/1514983202179674113/KPHBm2WC_400x400.jpg" height="300" width="100%" alt="video" />
+      <img src="https://pbs.twimg.com/profile_images/1514983202179674113/KPHBm2WC_400x400.jpg" height="300" width="100%"
+        alt="video" />
       <div class="space-video-titles">
         <p style="font-size: large;">
           Unegbu Kingsley
@@ -64,10 +73,11 @@
         </button>
       </div>
     </div>
-    
+
 
     <div class="video-block">
-      <img src="https://pbs.twimg.com/profile_images/1514983202179674113/KPHBm2WC_400x400.jpg" height="250" width="100%" alt="video" />
+      <img src="https://pbs.twimg.com/profile_images/1514983202179674113/KPHBm2WC_400x400.jpg" height="250" width="100%"
+        alt="video" />
       <div class="space-video-titles">
         <p style="font-size: large;">
           Unegbu Kingsley
@@ -84,7 +94,7 @@
           <mat-icon>videocam</mat-icon>
         </button>
       </div>
-    </div>
-    
+    </div>-->
+
   </div>
 </div>

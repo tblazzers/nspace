@@ -6,15 +6,16 @@ import { ProductivityFormComponent } from './pages/productivity-form/productivit
 import { SpaceComponent } from './pages/space/space.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { AuthGuard } from './guards/auth.guard';
-import { canActivate, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
+import { canActivate, redirectUnauthorizedTo, redirectLoggedInTo } from '@angular/fire/auth-guard';
 
 
 const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['login']);
+const redirectToAuthDashboard = () => redirectLoggedInTo(['dashboard']);
 
 const routes: Routes = [
-  { path: "", component: LoginComponent },
-  { path: "login", component: LoginComponent },
-  { path: "register", component: RegisterComponent },
+  { path: "", component: LoginComponent, ...canActivate(redirectToAuthDashboard) },
+  { path: "login", component: LoginComponent, ...canActivate(redirectToAuthDashboard) },
+  { path: "register", component: RegisterComponent, ...canActivate(redirectToAuthDashboard) },
   { path: "dashboard", component: DashboardComponent, ...canActivate(redirectUnauthorizedToLogin) },
   { path: "form", component: ProductivityFormComponent },
   { path: "space", component: SpaceComponent, ...canActivate(redirectUnauthorizedToLogin) },
